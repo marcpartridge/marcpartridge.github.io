@@ -131,7 +131,7 @@ body {
   font-family: "Rubik", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ffffff;
   background-color: #1c4646;
-  background-image: url(../img/);
+  background-image: url(../img/partridgemark.svg);
   background-size: 100px 100px;
   background-position: right 20px bottom -16px;
   background-repeat: no-repeat;
@@ -421,7 +421,7 @@ there.
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   body{
-  background-position: right 60px bottom -6px;
+  background-position: right 60px bottom -16px;
   padding-top: 0;
 }
 .container, .row {
