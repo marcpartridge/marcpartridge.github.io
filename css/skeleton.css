@@ -131,9 +131,9 @@ body {
   font-family: "Rubik", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ffffff;
   background-color: #1c4646;
-  background-image: url(../images/partridgemark.svg);
+  background-image: url(../img/);
   background-size: 100px 100px;
-  background-position: right 20px bottom -6px;
+  background-position: right 20px bottom -16px;
   background-repeat: no-repeat;
   padding-top: 20px;
 }
