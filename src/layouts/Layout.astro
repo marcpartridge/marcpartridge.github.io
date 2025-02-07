@@ -1,72 +1,21 @@
 ---
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+import Head from "./Head.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+const { seoTitle, seoDesc } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="green">
-			<slot />
-		</div>
+<html lang="en" class="dark">
+	<Head seoTitle={seoTitle} seoDesc={seoDesc}/>
+	<body class="flex flex-col min-h-svh bg-neutral-100 text-aztec-950 dark:bg-neutral-950 dark:text-gray-100 mx-auto max-w-screen-2xl px-5 xs:text-[16px] md:text-[18px]">
+		<Navigation />
+		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 251, 188, 18;
-		--accent-light: 255, 229, 159;
-		--accent-dark: 114, 85, 9;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #ffffff;
-		height: 100%;
-		box-sizing: border-box;
-		padding: 24px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
 	span.email b {
 		display: none;
 	}
-	a {
-  color: #FBBC12;
-font-weight: 500;}
-a:hover {
-  color: #ffffff; }
-  body {
-	height: 100%;
-	margin: 0;
-  }
-  .green {
-  height: 100%;
-  border-radius: 8px;
-  background-color: #193028;
-}
 </style>
